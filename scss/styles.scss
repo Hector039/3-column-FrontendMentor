@@ -1,77 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@100;200;400&display=swap');
 
 /*font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif;*/
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
     background-color: hsl(0, 0%, 95%);
-    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 iconify-icon {
     font-size: 35px;
-    color: hsl(31, 73%, 39%);
+    color: hsl(31, 98%, 67%);
 }
 .cyan-icon{
-    color: hsl(184, 98%, 19%);
+    color: hsl(184, 96%, 39%);
 }
 .dark-cyan-icon{
-    color: hsl(179, 100%, 10%);
+    color: hsl(179, 96%, 33%);
 }
-p{
+.card-text{
     color: hsl(0, 0%, 95%);
     font-family: 'Lexend Deca', sans-serif;
-    font-size: small;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 1.8;
+    padding: 0 20px 20px 0;
 }
 .heading{
+    color: hsl(0, 0%, 95%);
     font-family: 'Big Shoulders Display', cursive;
-    font-size: 25px;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 .cards{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .card-one{
     background-color: hsl(31, 77%, 52%);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    height: 300px;
-    width: 200px;
-    padding: 20px;
-    gap: 25px;
+    height: 340px;
+    width: 170px;
+    padding: 25px 35px 25px 35px;
+    gap: 15px;
 }
 
 .card-two{
     background-color: hsl(184, 100%, 22%);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 340px;
+    width: 170px;
+    padding: 25px 35px 25px 35px;
+    gap: 15px;
 }
 
 .card-tree{
     background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 340px;
+    width: 170px;
+    padding: 25px 35px 25px 35px;
+    gap: 15px;
 }
 
 button{
     background-color: hsl(0, 0%, 95%);
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 10px;
+    font-size: 11px;
     color: hsl(31, 77%, 52%);
     border-radius: 35px;
     border-style: none;
-    width: 85px;
-    height: 35px;
+    width: 110px;
+    height: 40px;
+    margin-top: 18px;
+    &:hover{
+        background-color: hsl(31, 77%, 52%);
+        border-color: hsl(0, 0%, 95%);
+        border-style:double ;
+        color: hsl(0, 0%, 95%);
+    }
 }
 
 .cyan{
         color: hsl(184, 100%, 22%);
+        &:hover{
+            background-color: hsl(184, 100%, 22%);
+            border-color: hsl(0, 0%, 95%);
+            color: hsl(0, 0%, 95%);
+        }
     }
 .dark-cyan{
         color: hsl(179, 100%, 13%);
+        &:hover{
+            background-color: hsl(179, 100%, 13%);
+            border-color: hsl(0, 0%, 95%);
+            color: hsl(0, 0%, 95%);
+        }
     }
+
+.attribution{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: smaller;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        height: 100vh;
+        justify-content: center;
+    }
+    .cards{
+        flex-direction: row;
+    }
+    .card-one{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    } 
+    .card-tree{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+    .attribution{
+        position: absolute;
+        bottom: 15px;
+    }
+}
